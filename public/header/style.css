@@ -1,0 +1,103 @@
+/* La partie du haut */
+.Annonce {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .Annonce p {
+      margin: 0;
+  }
+  
+  .test {
+      height: 2.75em;
+      background-color: #fae3e9;
+      border-bottom: 0.1rem solid rgba(151, 0, 40, 0.08);
+  }
+  
+  .test p {
+      color: #970028;
+      font-size: 18.2px;
+      letter-spacing: 1.05px;
+      line-height: 22.295px;
+      padding: 10.500px;
+  }
+
+/* la partie principal du bas */
+
+.BigHead {
+    color: #000000;
+    background-color: #f7ecf6;
+}
+
+.insideBigHead {
+    padding: 27px;
+    display: flex;
+    justify-content: center;
+}
+
+.insideBigHead {
+    display: flex;
+    gap: 23em;
+
+}
+
+.logoAlIman {
+    width: 220px;
+    height: 100px;
+    margin-bottom: 1.9em;
+
+}
+
+.mainBigHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.headList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.4em;
+    width: 20em;
+
+}
+
+.headList li {
+    display: inline;
+    margin: 0.6em;
+    
+
+}
+
+.headList a {
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+    font-size: 14.7px;
+    line-height: 18.9px;
+    letter-spacing: 0.63px;
+    text-align: left;
+
+}
+.headList a:hover {
+    color: #000000;
+    border-bottom: 1px solid;
+
+}
+
+
+svg {
+    height: 1.5em;
+    cursor: pointer;
+    padding-top: 2.5em;
+}
+
+svg:hover {
+    transform: scale(1.1);
+}
+
+.icon-cart-empty {
+    height: 3em;
+}
