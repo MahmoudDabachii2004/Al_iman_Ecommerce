@@ -88,16 +88,27 @@
 }
 
 
-svg {
+.insideBigHead svg {
     height: 1.5em;
     cursor: pointer;
     padding-top: 2.5em;
 }
 
-svg:hover {
+.insideBigHead svg:hover {
     transform: scale(1.1);
 }
 
 .icon-cart-empty {
     height: 3em;
+}
+
+.copyright__content {
+    color: rgba(0, 0, 0, 0.75);
+
+}
+
+.copyright__content a{
+    color: rgba(0, 0, 0, 0.75);
+    text-decoration: none;
+
 }

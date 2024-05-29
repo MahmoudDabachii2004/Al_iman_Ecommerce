@@ -1,0 +1,61 @@
+.leFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.BoiteLettre {
+    text-align: center;
+    font-size: 56px;
+    margin: 0;
+}
+
+.basFooter p {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 16.8px;
+    line-height: 29.6px;
+    letter-spacing: 0.63px;
+
+}
+
+
+#NewsletterFormInput {
+    width: 307.750px;
+    height: 15.750px;
+    padding: 15px;
+    padding-right: 52.500px;
+    border-radius: 26px;
+    border: 1px solid black;
+    font-size: 16.8px;
+    font-family: "New York", "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#Subscribe {
+    width: 46px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+}
+
+#Subscribe svg{
+    color: rgba(0, 0, 0, 0.75);
+    height: 12px;
+    width: 24px;
+    font-size: 6px;
+    text-align: center;
+    position: relative;
+    bottom: 8em;
+    left: 55em;
+
+}
+
+
