@@ -4,16 +4,17 @@
 
 
 
+
 export const footer = () => {
     let footer = document.createElement("footer");
 
     footer.innerHTML = `
         <div class="leFooter">
-            <div class="basFooter">
-                <h2 class="BoiteLettre">
+            <div class="basFooter hidden">
+                <h2 class="BoiteLettre logo">
                     💌
                 </h2>
-                <div>
+                <div class="logo">
                     <p>
                     Soyez le premier à connaître les nouvelles collections et les offres exclusives.
                     </p>
@@ -24,7 +25,7 @@ export const footer = () => {
                     <input type="hidden" name="utf8" value="✓">
                     <input type="hidden" name="contact[tags]" value="newsletter">
                     <div>
-                        <div class="userInput">
+                        <div class="userInput logo">
                             <input id="NewsletterFormInput" type="email" name="contact[email]" value="" aria-required="true" autocorrect="off" autocapitalize="off" autocomplete="email" placeholder="E-mail" required="">
                             <label for="NewsletterFormInput" id="NewsletterFormLabel">
                                 E-mail
@@ -40,17 +41,32 @@ export const footer = () => {
                 </div>
             </div>
         </div>
-        <div class="leFooter">
+        <div class="leFooter hidden">
             <div class="footer__content-bottom-wrapper page-width">
-                <div class="footer__copyright caption">
+                <div class="footer__copyright caption logo">
                     <small class="copyright__content">© 2024, <a href="/" title="">Al Iman</a></small>
                 </div>
             </div>
         </div>
-
+        <br></br>
         `;
 
   
     document.body.insertBefore(footer, document.body.lastChild);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if(entry.isIntersecting) {
+                entry.target.classList.add('show')
+            } 
+        })
+    })
+    
+    
 
+    
+    const hiddenElements = document.querySelectorAll(".hidden");
+    console.log(hiddenElements)
+    hiddenElements.forEach((el) => observer.observe(el))
+    
 }

@@ -28,19 +28,18 @@
 .BigHead {
     color: #000000;
     background-color: #f7ecf6;
-}
-
-.insideBigHead {
-    padding: 27px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 1.5em;
 }
 
 .insideBigHead {
     display: flex;
-    gap: 23em;
-
+    justify-content: space-between;
+    width: 130vh;
 }
+
 
 .logoAlIman {
     width: 220px;
@@ -90,17 +89,21 @@
 
 .insideBigHead svg {
     height: 1.5em;
+    padding: 0.5em;
     cursor: pointer;
-    padding-top: 2.5em;
+    position: relative;
+    top: 2em;
+}
+
+#iconCart{
+    height: 3em;
+    padding: 0;
 }
 
 .insideBigHead svg:hover {
     transform: scale(1.1);
 }
 
-.icon-cart-empty {
-    height: 3em;
-}
 
 .copyright__content {
     color: rgba(0, 0, 0, 0.75);
@@ -110,5 +113,26 @@
 .copyright__content a{
     color: rgba(0, 0, 0, 0.75);
     text-decoration: none;
+
+}
+
+#smallScreenBar {
+    height: 1.3em;
+    display: none;
+}
+
+
+@media (max-width: 990px) {
+    #smallScreenBar {
+        display: flex;
+    }
+    
+    #searchSVG {
+        display: none;
+    }
+    .headList {
+        display: none;
+        padding-bottom: 1em;
+    }
 
 }
