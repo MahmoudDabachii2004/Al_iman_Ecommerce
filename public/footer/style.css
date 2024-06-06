@@ -60,8 +60,8 @@
 
 .hidden {
     opacity: 0;
-    transform: translateY(15%);
-    transition: all 1s ease-in-out;
+    transform: translateY(50%);
+    transition: all 0.8s cubic-bezier(0, 0, .3, 1);
 }
 
 .show {
@@ -69,3 +69,9 @@
     transform: translateY(0);
 }
 
+.show:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.show:nth-child(3) {
+    transition-delay: 0.1s;
+}

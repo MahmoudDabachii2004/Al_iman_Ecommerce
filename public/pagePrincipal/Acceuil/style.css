@@ -5,43 +5,134 @@ body{
 
 }
 
+@font-face {
+    font-family: Alfie;
+    src: url(../../media/Alfie\ Casual.ttf);
+}
 
-.container {
+/* .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+}  */
+
+.sectionDuHaut {
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionDuHautCont {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+
+
+}
+
+.imageFondALIMAN {
+    width: 100%;
+    position: relative; 
 }
 
 .imageFondALIMAN img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* This property ensures that the image covers the entire container while maintaining its aspect ratio */
 }
 
 .bulleAllArticle {
-    width: 472.500px;
-    height: 195.391px;
-}
-
-.bulleAllArticle {
-    width: 472.500px;
-    height: 195.391px;
-    position: absolute;
-    background-color: #ffffff;
     display: flex;
-    border-radius: 20px;
-    right: 24em;
-    top: 19em;
-    
 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+} 
+
+.newtest {
+    width: 72em;
+    padding: 3em;
+    display: flex;
+    
+    justify-content: flex-end;
+}
+
+.bulleFinal {
+    background-color: #ffffff;
+    height: 195.391px;
+    width: 472.500px;
+    border-radius: 20px;
 }
 
 .AllArticle {
-    padding: 2em;
+    padding: 0em;
     display: flex;
     flex-direction: column;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    padding-left: 36.750px;
+    padding-right: 36.750px;
     color: #0e1b4d;
-    
+}
 
+.AllArticle h2 {
+    font-family: Alfie;
+    font-size: 33.6px;
+    line-height: 41.16px;
+    font-weight: 150;
+    margin-top: 0;
+}
+
+.banne_button {
+    width: 128PX;
+    height: 49px;
+    background-color: #0e1b4d;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 41px;
+    transition: all 0.1s ease-in-out;
+}
+
+.banne_button:hover {
+    transform: scale(1.02);
+    box-shadow: 
+    -10.5px -10.5px 10.5px -10.5px rgba(0, 0, 0, 0.05), 
+    10.5px 10.5px 10.5px -10.5px rgba(0, 0, 0, 0.05), 
+    0px 0px 5.25px 0px rgba(255, 255, 255, 0), 
+    0px 21px 36.75px -21px rgba(0, 0, 0, 0.5);
+}
+
+.banne_button a{
+    color: #ffffff;
+    padding: 0.9em;
+    border-radius: 41px;
+    padding-left: 2.6em;
+    padding-right: 2.6em;
+    text-decoration: none;
+    line-height: 18.75px;
+    font-size: 15.75px;
+    letter-spacing: 1.05px;
+
+}
+
+@media (max-width: 750px) {
+
+}
+
+.hidden1 {
+    opacity: 0;
+    transform: translateY(2%);
+    transition: all 0.8s cubic-bezier(0, 0, .3, 1);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }

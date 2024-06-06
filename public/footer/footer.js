@@ -1,6 +1,6 @@
 
 
-
+import { animationDOWNUP } from "/communJS/animation.js";
 
 
 
@@ -10,16 +10,16 @@ export const footer = () => {
 
     footer.innerHTML = `
         <div class="leFooter">
-            <div class="basFooter hidden">
-                <h2 class="BoiteLettre logo">
+            <div class="basFooter">
+                <h2 class="BoiteLettre hidden">
                     💌
                 </h2>
-                <div class="logo">
+                <div class="hidden">
                     <p>
                     Soyez le premier à connaître les nouvelles collections et les offres exclusives.
                     </p>
                 </div>
-                <div>
+                <div class="hidden">
                     <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8">
                     <input type="hidden" name="form_type" value="customer">
                     <input type="hidden" name="utf8" value="✓">
@@ -42,7 +42,7 @@ export const footer = () => {
             </div>
         </div>
         <div class="leFooter hidden">
-            <div class="footer__content-bottom-wrapper page-width">
+            <div class="hidden">
                 <div class="footer__copyright caption logo">
                     <small class="copyright__content">© 2024, <a href="/" title="">Al Iman</a></small>
                 </div>
@@ -51,22 +51,8 @@ export const footer = () => {
         <br></br>
         `;
 
+        document.body.insertBefore(footer, document.body.lastChild);
   
-    document.body.insertBefore(footer, document.body.lastChild);
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            console.log(entry)
-            if(entry.isIntersecting) {
-                entry.target.classList.add('show')
-            } 
-        })
-    })
-    
-    
-
-    
-    const hiddenElements = document.querySelectorAll(".hidden");
-    console.log(hiddenElements)
-    hiddenElements.forEach((el) => observer.observe(el))
+        animationDOWNUP(".hidden")
     
 }
