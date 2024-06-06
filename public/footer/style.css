@@ -58,6 +58,21 @@
 
 }
 
+@media (max-width: 750px) {
+    .basFooter {
+        width: 20em;
+    }
+    #Subscribe svg{
+
+        bottom: 11em;
+    }
+    .BoiteLettre  {
+        font-size: 46px;
+
+    }
+}
+
+
 .hidden {
     opacity: 0;
     transform: translateY(50%);

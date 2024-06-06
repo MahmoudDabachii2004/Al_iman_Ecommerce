@@ -23,7 +23,7 @@ body{
     position: relative;
     display: flex;
     flex-direction:column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 }
 
@@ -35,6 +35,8 @@ body{
 
 
 }
+
+
 
 .imageFondALIMAN {
     width: 100%;
@@ -122,9 +124,6 @@ body{
 
 }
 
-@media (max-width: 750px) {
-
-}
 
 .hidden1 {
     opacity: 0;
@@ -135,4 +134,70 @@ body{
 .show {
     opacity: 1;
     transform: translateY(0);
+}
+
+.bulleAllArticlev2 {
+    display: none;
+    padding: 2em;
+}
+
+.bulleAllArticlev2 h2{
+    font-family: Alfie;
+    font-size: 28px;
+    line-height: 41.16px;
+    font-weight: 150;
+    margin-top: 0;
+    color: #0e1b4d;
+}
+
+
+
+/* SECTION DU BAS */
+
+
+
+.sectionDuBas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSectionBAs {
+    width: 70em;
+}
+
+.collectionText h2{
+    color: #970028;
+    font-family: Alfie;
+    line-height: 41.16px;
+    font-size: 33.6px;
+    font-weight: 150;
+    letter-spacing: 0.84px;
+    padding-top: 0.6em;
+}
+
+
+
+
+
+
+@media (max-width: 750px) {
+    .newtest {
+        display: none;
+        
+    }
+    .bulleAllArticlev2 {
+        display: flex;
+        align-items: left;
+
+    }
+    
+    .sectionDuHaut {
+        display: flex;
+        align-items: left;
+    }
+    .basFooter {
+        width: 20em;
+    }
+    
 }
