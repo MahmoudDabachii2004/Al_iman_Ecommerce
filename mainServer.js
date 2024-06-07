@@ -3,6 +3,8 @@ const app = express();
 const path = require("path");
 const PORT = 3000;
 const produits = require('./Routes/Produits/Produit.js');
+const collections = require('./Routes/Collections/Collections.js');
+
 
 
 app.use(express.static(__dirname + '/public'));
@@ -16,7 +18,9 @@ app.get('/', (req, res) => {
 });
 
 
-app.use('', produits);
+app.use('/api', produits);
+app.use('/api', collections);
+
 
 
 app.listen(PORT, () => {

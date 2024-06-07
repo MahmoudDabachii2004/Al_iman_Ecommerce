@@ -3,20 +3,47 @@ const express = require("express");
 const produits = express.Router();
 const db = require("../../db/db.js");
 
-produits.get('/getAllProduits', (req,res) => {
-    let sql = `SELECT * FROM PRODUITS`;    
+produits.get('/getAllProduits', (req, res) => {
+    let sql = `SELECT * FROM Produits JOIN ImageProduits ON Produits.id_Produit = ImageProduits.id_Produit`;
+
     try {
         db.all(sql, [], (err, rows) => {
             if (err) {
-            throw err;
+                throw err;
             }
-                console.log(rows);
-                res.json(rows)
-            });
             
+            // Create a map to store products with their images grouped
+            let productsWithImages = {};
+
+            // Loop through each row and group images by product id
+            rows.forEach(row => {
+                const { id_Produit, id_TypeProduits, NomProduits, Description, Prix, IMAGE } = row;
+                
+                // If the product doesn't exist in the map, initialize it with an empty array
+                if (!productsWithImages[id_Produit]) {
+                    productsWithImages[id_Produit] = {
+                        id_Produit,
+                        id_TypeProduits,
+                        NomProduits,
+                        Description,
+                        Prix,
+                        images: []
+                    };
+                }
+                
+                // Push the image URL to the images array of the corresponding product
+                productsWithImages[id_Produit].images.push(IMAGE);
+            });
+
+            // Convert the map values (grouped products) to an array
+            const groupedProducts = Object.values(productsWithImages);
+            
+            console.log(groupedProducts);
+            res.json(groupedProducts);
+        });
     } catch (error) {
-        
+        // Handle errors
     }
-})
+});
 
 module.exports = produits;

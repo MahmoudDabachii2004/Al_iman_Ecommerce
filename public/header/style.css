@@ -1,9 +1,11 @@
 /* La partie du haut */
 .Annonce {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
   
   .Annonce p {
       margin: 0;
@@ -22,6 +24,10 @@
       line-height: 22.295px;
       padding: 10.500px;
   }
+
+
+
+
 
 /* la partie principal du bas */
 

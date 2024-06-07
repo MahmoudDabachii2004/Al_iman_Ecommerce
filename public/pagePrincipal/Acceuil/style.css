@@ -189,10 +189,15 @@ body{
 .lesCard {
     display: flex;
     gap: 2em;
+    flex-wrap: wrap; /* Allow cards to wrap onto new rows */
+
+
 }
 
 .newCard {
+
     font-family: Alfie;
+    font-weight: 100;
     background-color: #ffffff;
     border: #0e1b4d solid 1.9px;
     border-radius: 1.3em;
@@ -203,9 +208,115 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    
+    transition: transform 0.2s ease-out;
+
 }
 
 
+.newCard:hover{
+    cursor: pointer;
+    transform: rotate(0.6deg);
+    box-shadow: rgba(0, 0, 0, 0.05) -10.5px -10.5px 10.5px -10.5px, 
+                rgba(0, 0, 0, 0.05) 10.5px 10.5px 10.5px -10.5px, 
+                rgba(255, 255, 255, 0) 0px 0px 5.25px 0px, 
+                rgba(0, 0, 0, 0.5) 0px 21px 36.75px -21px;
+    transition: transform 1s ease-out
+    
+}
+
+.newCard:hover .lienProduit{
+    text-decoration: underline;
+
+    
+}
+
+
+.imgPrincipalContainer {
+    height: 21em;
+    overflow: hidden;
+}
+
+.imageProduitPrincipal {
+    transition: transform 0.3s ease-in-out; 
+
+}
+
+.newCard:hover .imageProduitPrincipal {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+    transition: transform 1s ease-in-out; 
+}
+
+
+
+.basCard {
+    width: 85%;
+
+
+}
+
+.basCard a{
+    font-weight: lighter;
+    font-size: 1.1em;
+
+
+}
+
+.basCard h2{
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    margin-top: 0;
+    position: relative;
+    bottom: 0.5em;
+
+}
+
+
+.bouttonClass {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.basCard button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    width: 15.5em;
+    height: 3.5em;
+    border-radius: 40px;
+    border: #0e1b4d 2px solid;
+    color: #0e1b4d;
+    font-size: 15.75px;
+    line-height: 18.75px;
+    letter-spacing: 1.05px;
+    transition: transform 0.5s ease-in-out
+}
+
+
+.newCard button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    border: #0e1b4d 3px solid;
+    box-shadow: 
+    rgba(0, 0, 0, 0.05) -10.5px -10.5px 10.5px -10.5px, 
+    rgba(0, 0, 0, 0.05) 10.5px 10.5px 10.5px -10.5px,   
+    rgba(255, 255, 255, 0) 0px 0px 5.25px 0px,    
+    rgba(0, 0, 0, 0.5) 0px 21px 36.75px -21px;
+
+}
+
+.hidden2 {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 1s cubic-bezier(0, 0, .3, 1);
+}
 
 
 @media (max-width: 750px) {
@@ -226,5 +337,7 @@ body{
     .basFooter {
         width: 20em;
     }
+
+
     
 }
