@@ -156,27 +156,54 @@ body{
 
 
 
-.sectionDuBas {
+.sectionDuBas1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fae3e9;
+    padding: 2.7em;
+    padding-bottom: 4em;
+
 }
 
 .containerSectionBAs {
-    width: 70em;
+    width: 80em;
 }
 
 .collectionText h2{
     color: #970028;
     font-family: Alfie;
     line-height: 41.16px;
-    font-size: 33.6px;
+    font-size: 37px;
     font-weight: 150;
     letter-spacing: 0.84px;
-    padding-top: 0.6em;
 }
 
 
+.collectionCARD {
+    display: flex;
+    justify-content: left;
+    
+}
+
+.lesCard {
+    display: flex;
+    gap: 2em;
+}
+
+.newCard {
+    font-family: Alfie;
+    background-color: #ffffff;
+    border: #0e1b4d solid 1.9px;
+    border-radius: 1.3em;
+    color: #0e1b4d;
+    width: 19em;
+    height: 33em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
